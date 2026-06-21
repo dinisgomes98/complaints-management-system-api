@@ -14,11 +14,11 @@ class Complaint(Base):
     status_id = Column(Integer, ForeignKey("statuses.id"), nullable=False)
     priority_id = Column(Integer, ForeignKey("priorities.id"), nullable=False)
     customer_id = Column(Integer, ForeignKey("customers.id"), nullable=False)
-    assigned_employee_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-
+    assigned_employee_id = Column(Integer, ForeignKey("employees.id"), nullable=False)
+    problem_solving_id = Column(Integer, ForeignKey("problem_solvings.id"), nullable=True)
 
     status = relationship("Status", back_populates="complaints")
     priority = relationship("Priority", back_populates="complaints")
     customer = relationship("Customer", back_populates="complaints")
     assigned_employee = relationship("Employee", back_populates="complaints")
-
+    problem_solving = relationship("ProblemSolving", back_populates="complaints")

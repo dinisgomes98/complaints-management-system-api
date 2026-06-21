@@ -12,3 +12,4 @@ class Employee(Base):
 
     complaints = relationship("Complaint", back_populates="assigned_employee")
     role = relationship("Role", back_populates="employees")
+    approved_problem_solvings = relationship("Problem_Solving", back_populates="approver")
