@@ -9,7 +9,7 @@ class Complaint(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
     description = Column(String, nullable=False)
-    created_at = Column(DateTime, default=datetime, default=lambda: datetime.now(UTC))
+    created_at = Column(DateTime, default=lambda: datetime.now(UTC))
     closed_at = Column(DateTime)
     status_id = Column(Integer, ForeignKey("statuses.id"), nullable=False)
     priority_id = Column(Integer, ForeignKey("priorities.id"), nullable=False)
