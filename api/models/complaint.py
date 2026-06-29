@@ -21,4 +21,4 @@ class Complaint(Base):
     priority = relationship("Priority", back_populates="complaints")
     customer = relationship("Customer", back_populates="complaints")
     assigned_employee = relationship("Employee", back_populates="complaints")
-    problem_solving = relationship("ProblemSolving", back_populates="complaints")
+    problem_solving = relationship("Problem_Solving", back_populates="complaints")
