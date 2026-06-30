@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from api.database import Base, engine
 import api.models
 
+import api.routes
 
 app = FastAPI(
     title="Complaints Management System API",
@@ -10,6 +11,8 @@ app = FastAPI(
 )
 
 Base.metadata.create_all(bind=engine)
+
+app.include_router(api.routes.customer_router)
 
 
 @app.get("/")
