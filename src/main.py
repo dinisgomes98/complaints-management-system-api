@@ -14,6 +14,7 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(api.routes.customer_router)
 app.include_router(api.routes.employee_router)
+app.include_router(api.routes.complaint_router)
 
 
 @app.get("/")

@@ -3,7 +3,7 @@ from api.database import SessionLocal
 from api.schemas.complaint import ComplaintCreate, ComplaintResponse, ComplaintUpdate
 from api.services.complaint import get_complaints, get_complaint, create_complaint, update_complaint, delete_complaint
 
-complaint_router = APIRouter(prefix="/api/complaints", tags=["complaint"])
+complaint_router = APIRouter(prefix="/api/complaints", tags=["Complaint"])
 
 @complaint_router.get("/", response_model=list[ComplaintResponse])
 def all_complaint():
