@@ -17,6 +17,8 @@ app.include_router(api.routes.employee_router)
 app.include_router(api.routes.complaint_router)
 app.include_router(api.routes.problem_solving_router)
 app.include_router(api.routes.status_router)
+app.include_router(api.routes.priority_router)
+app.include_router(api.routes.role_router)
 
 @app.get("/")
 def index():
