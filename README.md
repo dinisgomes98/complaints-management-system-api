@@ -91,8 +91,8 @@ This project was built to practice:
 - [x] Database creation
 - [x] Pydantic schemas
 - [x] Seed database
-- [ ] CRUD Services
-- [ ] API Routes
+- [x] CRUD Services
+- [x] API Routes
 - [ ] Authentication & Authorization
 - [ ] Analytics
 - [ ] Testing
